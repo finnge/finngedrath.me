@@ -1,2 +1,3 @@
-# finnge.github.io
-Homepage on github
+# Finn Nils Gedrath
+
+To be continued
