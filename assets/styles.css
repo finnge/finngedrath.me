@@ -51,8 +51,11 @@ table {
 body {
     font-family: 'Inconsolata', monospace;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 2rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
 }
 
 main {
@@ -68,21 +71,39 @@ p {
 h1 {
     position: relative;
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 0.5em;
+    font-weight: 800;
 }
 
 h1:before {
     content: '#';
-    color: #ccc;
+    color: rgb(189,189,189);
     position: absolute;
     left: -1.5rem;
 }
 
 a {
-    color: #E55934;
+    color: rgb(244,81,30);
 }
 
 a:hover, a:focus {
-    color: #EA8127;
+    color: rgb(255,87,34);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(33,33,33);
+        color: rgb(245,245,245);
+    }
+    h1:before {
+        color: rgb(189,189,189);
+    }
+    a {
+        color: rgb(255,138,101);
+    }
+
+    a:hover, a:focus {
+        color: rgb(255,171,145);
+    }
 }
