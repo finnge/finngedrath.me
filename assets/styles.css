@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 500;
+    padding: 2rem;
+    margin: 0;
+}
+
+main {
+    max-width: 500px;
+    padding-left: 1rem;
+}
+
+p {
+    line-height: 1.3;
+}
+
+h1 {
+    position: relative;
+    margin: 0
+}
+
+h1:before {
+    content: '#';
+    color: #ccc;
+    position: absolute;
+    left: -1.5rem;
+}
+
+a {
+    color: #E55934;
+}
+
+a:hover, a:focus {
+    color: #EA8127;
+}
