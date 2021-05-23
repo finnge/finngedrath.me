@@ -47,16 +47,39 @@ table {
 	border-spacing: 0;
 }
 
+/********************
+ * Styles           *
+ ********************/
+
+:root {
+    --font-family: 'Inconsolata', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    --color-prim: rgb(244,81,30);
+    --color-prim-interactive: rgb(255,87,34);
+    --text-color: #000;
+    --bg-color: #fff;
+    --border: 2px dashed var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-prim: rgb(255,138,101);
+        --color-prim-interactive: rgb(255,171,145);
+        --text-color: rgb(245,245,245);
+        --bg-color: rgb(28,28,30);
+    }
+}
 
 body {
-    font-family: 'Inconsolata', monospace;
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 1.1rem;
     padding: 2rem;
+    max-width: 60ch;
     text-rendering: optimizeLegibility;
     -webkit-font-variant-ligatures: common-ligatures;
     font-variant-ligatures: common-ligatures;
-    max-width: 500px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 p {
@@ -84,42 +107,20 @@ h3 {
 }
 
 a {
-    color: rgb(244,81,30);
+    color: var(--color-prim);
 }
 
 a:hover, a:focus {
-    color: rgb(255,87,34);
+    color: var(--color-prim-interactive);
 }
 
 hr {
     border: none;
-    border-top: 2px dashed #000;
+    border-top: var(--border);
     margin: 3rem 0;
 }
 
 footer {
-    border-top: 2px dashed #000;
+    border-top: var(--border);
     margin: 3rem 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: rgb(28,28,30);
-        color: rgb(245,245,245);
-    }
-    a {
-        color: rgb(255,138,101);
-    }
-
-    a:hover, a:focus {
-        color: rgb(255,171,145);
-    }
-
-    hr {
-        border-color: rgb(245,245,245);
-    }
-
-    footer {
-        border-color: rgb(245,245,245);
-    }
 }
