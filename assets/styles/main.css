@@ -17,6 +17,11 @@
         --color-prim-interactive: rgb(255,171,145);
         --text-color: rgb(245,245,245);
         --bg-color: rgb(28,28,30);
+        --image-filter: brightness(0.8) contrast(1.2);;
+    }
+ 
+    img:not([src*=".svg"]) {
+        filter: var(--image-filter);
     }
 }
 
