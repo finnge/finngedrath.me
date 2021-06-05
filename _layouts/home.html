@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<header>
+    <h1>{{ site.title }}</h1>
+
+    {% include image.html file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand" %}
+
+    <ul>
+        {% for account in site.data.accounts %}
+        <li><a href="{{ account[1].uri }}" title="{{ account[1].at }}">
+            {%- assign icon = account[0] -%}
+            {%- include icon.html name=icon -%}
+        </a></li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for hashtag in page.hashtags %}
+        <li>#{{ hashtag }}</li>
+        {% endfor %}
+    </ul>
+
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        {{ content }}
+    </section>
+    <section>
+        <h2 id="projects">projects</h2>
+    </section>
+</main>
+

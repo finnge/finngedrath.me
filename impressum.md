@@ -10,7 +10,7 @@ Finkelsteinstraße 19 \
 
 ## Kontakt
 
-E-Mail: <span id="mailing"></span>
+E-Mail: <span id="mailing">🤫</span>
 
 ---
 

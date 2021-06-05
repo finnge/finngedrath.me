@@ -1,0 +1,15 @@
+{%- comment -%} TODO: automatic files {%- endcomment -%}
+
+<figure markdown="0">
+    {%- if include.url -%}<a href="{{ include.url }}">{%- endif -%}
+    <picture>
+        <source srcset="/assets/images/{{ include.file }}_500x500.avif 1x, /assets/images/{{ include.file }}_1000x1000.avif 2x" type="image/avif" />
+        <source srcset="/assets/images/{{ include.file }}_500x500.webp 1x, /assets/images/{{ include.file }}_1000x1000.webp 2x" type="image/webp" />
+        <img src="/assets/images/{{ include.file }}_500x500.jpg" srcset="/assets/images/{{ include.file }}_500x500.jpg 1x, /assets/images/{{ include.file }}_1000x1000.jpg 2x" height="300" width="300" loading="lazy" alt="{{ include.alt }}" />
+    </picture>
+    {%- if include.url -%}</a>{%- endif -%}
+
+    {%- if include.caption -%}
+    <figcaption markdown="span">{{ include.caption }}</figcaption>
+    {%- endif -%}
+</figure>
