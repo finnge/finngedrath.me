@@ -1,12 +1,13 @@
----
-layout: default
----
+{% include head.html %}
 
 <header>
-    <h1>{{ site.title }}</h1>
-
-    {% include image.html figure=0 file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand" class="profile" ratio="1 / 1" %}
-
+    <div class="profile">
+        <h1>{{ site.title }}</h1>
+        
+        {% include image.html figure=0 file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand"
+        class="profile__picture" %}
+    </div>
+    
     <ul class="socialmedia">
         {% for account in site.data.accounts %}
         <li class="socialmedia__item"><a href="{{ account[1].uri }}" title="{{ account[1].at }}">
@@ -22,11 +23,7 @@ layout: default
         {% endfor %}
     </ul>
 
-    <nav class="mainnav">
-        <ul>
-
-        </ul>
-    </nav>
+    {% include nav.html %}
 </header>
 <main>
     <section>
@@ -34,6 +31,12 @@ layout: default
     </section>
     <section>
         <h2 id="projects">projects</h2>
+        <div class="coming-soon">
+            <div class="coming-soon_text">
+                Coming soon...
+            </div>
+        </div>
     </section>
 </main>
 
+{% include footer.html %}

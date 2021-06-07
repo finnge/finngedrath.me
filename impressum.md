@@ -1,18 +1,18 @@
 ---
-title: Impressum
-layout: page
+title: impressum
+layout: default
 ---
 
-## Angaben gemäß § 5 TMG
+## angaben gemäß § 5 TMG
 Finn Nils Gedrath \
 Finkelsteinstraße 19 \
 51375 Leverkusen
 
-## Kontakt
+## kontakt
 
 E-Mail: <span id="mailing">🤫</span>
 
----
+## haftungsausschluss
 
 ### Haftung für Inhalte
 Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
