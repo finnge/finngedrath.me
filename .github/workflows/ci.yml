@@ -1,9 +1,7 @@
 name: finngedrath.me CI
 
 on:
-  push:
-    paths:
-      - '**/*.css'
+  - push
 
 jobs:
   coding-style:
