@@ -1,0 +1,42 @@
+{% include head.html %}
+
+<header>
+    <div class="profile">
+        <h1>{{ site.title }}</h1>
+        
+        {% include image.html figure=0 file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand"
+        class="profile__picture" %}
+    </div>
+    
+    <ul class="socialmedia">
+        {% for account in site.data.accounts %}
+        <li class="socialmedia__item"><a href="{{ account[1].uri }}" title="{{ account[1].at }}">
+            {%- assign icon = account[0] -%}
+            {%- include icon.html name=icon -%}
+        </a></li>
+        {% endfor %}
+    </ul>
+
+    <ul class="hashtags">
+        {% for hashtag in page.hashtags %}
+        <li class="hashtags__tag">#{{ hashtag }}</li>
+        {% endfor %}
+    </ul>
+
+    {% include nav.html %}
+</header>
+<main>
+    <section>
+        {{ content }}
+    </section>
+    <section>
+        <h2 id="projects">projects</h2>
+        <div class="coming-soon">
+            <div class="coming-soon_text">
+                Coming soon...
+            </div>
+        </div>
+    </section>
+</main>
+
+{% include footer.html %}

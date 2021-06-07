@@ -1,0 +1,27 @@
+[style*="--aspect-ratio"] {
+    aspect-ratio: var(--aspect-ratio);
+    object-fit: cover;
+}
+
+@supports not (aspect-ratio) {
+    [style*="--aspect-ratio"] {
+        position: relative;
+    }
+    
+    [style*="--aspect-ratio"]::before {
+        display: block;
+        padding-bottom: calc(100% / var(--aspect-ratio));
+        content: "";
+    }
+
+    [style*="--aspect-ratio"] > :first-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

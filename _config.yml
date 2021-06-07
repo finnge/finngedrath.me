@@ -1,0 +1,48 @@
+timezone: Europe/Berlin
+
+permalink: /:title/
+
+title: Finn Nils Gedrath
+url: https://finngedrath.me
+
+markdown: kramdown
+
+kramdown:
+  entity_output: as_input
+  extensions: [footnotes]
+  footnote_location: "my_footnotes"
+  parse_block_html: true
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: "highlight"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+  - src/
+  - docker-compose.yml
+  - .editorconfig
+  - .gitignore
+
+keep_files:
+  - android-chrome-192x192.png
+  - apple-touch-icon.png
+  - browserconfig.xml
+  - favicon-16x16.png
+  - favicon-32x32.png
+  - favicon.ico
+  - mstile-150x150.png
+  - site.webmanifest
