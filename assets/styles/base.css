@@ -73,8 +73,10 @@ body {
     background-color: var(--c-bg-1);
     color: var(--c-fg-1);
     grid-gap: var(--xxl);
-    grid-template-columns: calc(var(--base-xl) * 9rem) 1fr;
+    grid-template-columns: var(--grid-left-width) 1fr;
     grid-template-rows: 1fr;
+
+    --grid-left-width: calc(var(--base-xl) * 10rem);
 }
 
 section:not(:last-child) {
@@ -89,7 +91,7 @@ footer {
 .profile__picture {
     --aspect-ratio: 1 / 1;
     width: 100%;
-    height: calc(var(--base-xl) * 9rem);
+    height: var(--grid-left-width);
     margin: var(--m) 0;
     border-radius: 50%;
 }
@@ -118,11 +120,7 @@ footer {
 
 @media screen and (max-width: 55rem) {
     body {
-        grid-template-columns: calc(var(--base-xl) * 6rem) 1fr;
-    }
-
-    .profile__picture {
-        height: calc(var(--base-xl) * 6rem);
+        --grid-left-width: calc(var(--base-xl) * 6rem);
     }
 }
 
