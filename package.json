@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0"
+  },
+  "name": "finngedrath.me",
+  "description": "To be continued",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint:style",
+    "lint:style": "stylelint assets/**/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finnge/finngedrath.me.git"
+  },
+  "author": "Finn Nils Gedrath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finnge/finngedrath.me/issues"
+  },
+  "homepage": "https://github.com/finnge/finngedrath.me#readme"
+}

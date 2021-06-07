@@ -5,26 +5,26 @@ layout: default
 <header>
     <h1>{{ site.title }}</h1>
 
-    {% include image.html file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand" %}
+    {% include image.html figure=0 file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand" class="profile" ratio="1 / 1" %}
 
-    <ul>
+    <ul class="socialmedia">
         {% for account in site.data.accounts %}
-        <li><a href="{{ account[1].uri }}" title="{{ account[1].at }}">
+        <li class="socialmedia__item"><a href="{{ account[1].uri }}" title="{{ account[1].at }}">
             {%- assign icon = account[0] -%}
             {%- include icon.html name=icon -%}
         </a></li>
         {% endfor %}
     </ul>
 
-    <ul>
+    <ul class="hashtags">
         {% for hashtag in page.hashtags %}
-        <li>#{{ hashtag }}</li>
+        <li class="hashtags__tag">#{{ hashtag }}</li>
         {% endfor %}
     </ul>
 
-    <nav>
+    <nav class="mainnav">
         <ul>
-            
+
         </ul>
     </nav>
 </header>

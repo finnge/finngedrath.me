@@ -1,0 +1,136 @@
+body {
+    padding: calc(2 * var(--xxl)) var(--xxl);
+    background-color: var(--c-bg-1);
+    color: var(--c-fg-1);
+    font-family: var(--ff-mono);
+    font-size: var(--m);
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+    font-weight: var(--fw-normal);
+    line-height: var(--lh-normal);
+    text-rendering: optimizeLegibility;
+}
+
+img:not([src*=".svg"]) {
+    filter: var(--image-filter);
+}
+
+p {
+    max-width: var(--max-line-length);
+    margin: 1em 0;
+}
+
+h1, h2 {
+    margin: var(--m) 0 var(--s);
+    font-family: var(--ff-serif);
+    line-height: var(--lh-tight);
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    font-size: var(--xl);
+    font-weight: var(--fw-bold);
+}
+
+h2 {
+    margin-bottom: 0.5em;
+    font-size: var(--xl);
+}
+
+h3 {
+    margin-top: 2em;
+    font-size: var(--l);
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--c-prim);
+}
+
+a:hover, a:focus {
+    color: var(--c-prim-interactive);
+}
+
+hr {
+    border: none;
+    border-top: var(--border);
+    margin: 3rem 0;
+}
+
+footer {
+    border-top: var(--border);
+    margin: 3rem 0;
+}
+
+.profile {
+    /* aspect-ratio: 1 / 1;
+    object-fit: cover; */
+    max-width: 100%;
+    margin: var(--m) 0;
+    border-radius: 50%;
+}
+
+
+
+body {
+    display: grid;
+    grid-gap: var(--xxl);
+    grid-template-columns: calc(var(--base-l) * 15ch) 1fr; /* "Finn Nils Gedrath" = 15ch */
+    grid-template-rows: 1fr;   
+}
+
+@media screen and (max-width: 55rem) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: grid;
+        grid-gap: var(--xxl);
+        grid-template-columns: 1fr 3fr;   
+    }
+
+    header :not(.profile, picture) {
+        grid-column: 2;
+    }
+
+    header .profile,
+    header picture {
+        align-self: start;
+        grid-column: 1;
+    }
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--m) 0;
+}
+
+.socialmedia__item svg{
+    width: var(--l);
+    height: var(--l);
+}
+
+.socialmedia__item a {
+    color: var(--c-fg-1);
+}
+
+.socialmedia__item a:hover,
+.socialmedia__item a:focus,
+.socialmedia__item a:focus-within {
+    color: var(--c-fg-3);
+}
+
+.hashtags {
+    margin: var(--m) 0;
+}
+.hashtags__tag {
+    display: inline;
+}
+
+.mainnav {
+    padding: var(--m) 0;
+    border-top: var(--border-3);
+    margin: var(--xxl) 0;
+}

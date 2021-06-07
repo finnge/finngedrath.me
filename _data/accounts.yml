@@ -1,14 +1,17 @@
-youtube:
-  uri: https://www.youtube.com/channel/UChP5E_9YC5LSierF2bijG3Q
-
 instagram:
   at: "@finn_nils"
   uri: https://www.instagram.com/finn_nils/
+
+youtube:
+  uri: https://www.youtube.com/channel/UChP5E_9YC5LSierF2bijG3Q
+
+github:
+  at: "@finnge"
+  uri: https://github.com/finnge
 
 linkedin:
   at: "@finnge"
   uri: https://www.linkedin.com/in/finnge/
 
-github:
-  at: "@finnge"
-  uri: https://github.com/finnge
+mail:
+  uri: mailto:finn.gedrath@gmail.com

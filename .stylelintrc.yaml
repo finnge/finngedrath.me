@@ -1,0 +1,8 @@
+# plugins:
+#   - stylelint-scss
+
+extends:
+  - stylelint-config-idiomatic-order
+
+rules:
+  indentation: 4
