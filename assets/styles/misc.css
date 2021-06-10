@@ -7,7 +7,7 @@
     [style*="--aspect-ratio"] {
         position: relative;
     }
-    
+
     [style*="--aspect-ratio"]::before {
         display: block;
         padding-bottom: calc(100% / var(--aspect-ratio));

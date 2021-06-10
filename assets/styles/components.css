@@ -7,7 +7,7 @@
     margin: var(--m) 0;
 }
 
-.socialmedia__item svg{
+.socialmedia__item svg {
     width: var(--l);
     height: var(--l);
 }
@@ -28,6 +28,7 @@
 .hashtags {
     margin: var(--m) 0;
 }
+
 .hashtags__tag {
     display: inline;
 }
