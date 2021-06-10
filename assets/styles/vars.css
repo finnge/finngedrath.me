@@ -17,7 +17,6 @@
     --xl:   calc(var(--base) * var(--base-xl));
     --xxl:  calc(var(--base) * var(--base-xxl)); */
 
-
     /* Sizes: Renard 10 -> 10, 12.5, 16, 20, 25, 31.5, 40
        ========================================================================== */
     --base: 1rem; /* Default: 16px */
@@ -35,7 +34,6 @@
     --l: calc(var(--base) * var(--base-l));
     --xl: calc(var(--base) * var(--base-xl));
     --xxl: calc(var(--base) * var(--base-xxl));
-
 
     /* Color
        ========================================================================== */
@@ -75,7 +73,6 @@
     --max-line-length: 60ch;
     --min-line-length: 40ch;
 }
-
 
 /* ==========================================================================
    Dark-Mode
