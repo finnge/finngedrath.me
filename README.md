@@ -10,7 +10,7 @@ Personal Homepage and Portfolio. Feedback always via PR or Issue welcome! ✌�
 
 3. Run `docker compose up` or `jekyll run serve`.
 
-4. Open Site on `http://localhost:4000`
+4. Open Site on `http://localhost:4001`
 
 5. Be happy 🎉
 

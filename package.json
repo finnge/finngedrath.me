@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint:style",
-    "lint:style": "stylelint assets/**/*.css"
+    "lint": "stylelint assets/**/*.css",
+    "lint:fix": "stylelint --fix assets/**/*.css"
   },
   "repository": {
     "type": "git",
