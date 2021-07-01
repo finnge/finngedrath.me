@@ -32,8 +32,8 @@ jobs:
         name: Install node dependencies
         run: npm install -D
       -
-        name: Check Linting for CSS Code
-        run: npm run lint:style
+        name: Run Tests
+        run: npm test
         if: ${{ success() || failure() }}
 
   build:
