@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint:style",
+    "test": "npm run lint",
     "lint": "stylelint assets/**/*.css",
     "lint:fix": "stylelint --fix assets/**/*.css"
   },
