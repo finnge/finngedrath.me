@@ -21,10 +21,15 @@ p {
     margin: 1em 0;
 }
 
+p:first-child {
+    margin-top: 0;
+}
+
 h1,
 h2 {
     margin: var(--m) 0 var(--s);
     font-family: var(--ff-serif);
+    font-weight: var(--fw-normal);
     line-height: var(--lh-tight);
 }
 

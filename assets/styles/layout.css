@@ -36,6 +36,7 @@ footer {
     padding: var(--m) 0;
     border-top: var(--border-3);
     margin: var(--xxl) 0;
+    list-style: none;
 }
 
 .mainnav__item {

@@ -20,11 +20,21 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: "highlight"
 
+collections:
+  projects:
+    output: true
+    permalink: projects/:path/
+
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "projects"
+      type: projects
+    values:
+      layout: project
 
 exclude:
   - Gemfile

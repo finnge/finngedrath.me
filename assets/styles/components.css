@@ -4,7 +4,9 @@
 .socialmedia {
     display: flex;
     justify-content: space-around;
+    padding-left: 0;
     margin: var(--m) 0;
+    list-style: none;
 }
 
 .socialmedia__item svg {
@@ -26,7 +28,9 @@
    Hashtag
    ========================================================================== */
 .hashtags {
+    padding-left: 0;
     margin: var(--m) 0;
+    list-style: none;
 }
 
 .hashtags__tag {
@@ -43,4 +47,10 @@
     align-items: center;
     justify-content: center;
     background-color: var(--c-bg-2);
+}
+
+/* tesaer */
+
+.teaser {
+    width: 100%;
 }
