@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Social-Media
+   ========================================================================== */
+.socialmedia {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--m) 0;
+}
+
+.socialmedia__item svg {
+  width: var(--l);
+  height: var(--l);
+}
+
+.socialmedia__item a {
+  color: var(--c-fg-1);
+}
+
+.socialmedia__item a:hover,
+.socialmedia__item a:focus,
+.socialmedia__item a:focus-within {
+  color: var(--c-prim-interactive);
+}
+
+/* ==========================================================================
+   Hashtag
+   ========================================================================== */
+.hashtags {
+  margin: var(--m) 0;
+}
+
+.hashtags__tag {
+  display: inline;
+}
+
+/* ==========================================================================
+   Coming Soon
+   ========================================================================== */
+.coming-soon {
+  display: flex;
+  max-width: calc(2 * var(--max-line-length));
+  height: calc(2 / 3 * var(--max-line-length));
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-bg-2);
+}

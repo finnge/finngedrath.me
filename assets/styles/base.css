@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Text
+   ========================================================================== */
+
+body {
+  font-family: var(--ff-mono);
+  font-size: var(--m);
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-normal);
+  text-rendering: optimizeLegibility;
+}
+
+img:not([src*=".svg"]) {
+  filter: var(--image-filter);
+}
+
+p {
+  max-width: var(--max-line-length);
+  margin: 1em 0;
+}
+
+h1,
+h2 {
+  margin: var(--m) 0 var(--s);
+  font-family: var(--ff-serif);
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--xl);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--xl);
+}
+
+h2:not(:first-child) {
+  margin-top: var(--xxl);
+}
+
+h3 {
+  margin-top: 2em;
+  font-size: var(--m);
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--c-prim);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--c-prim-interactive);
+}
+
+hr {
+  border: none;
+  border-top: var(--border-1);
+  margin: 3rem 0;
+}

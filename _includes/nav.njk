@@ -1,0 +1,9 @@
+<nav class="mainnav">
+  <ul>
+  {% for item in nav %}
+    <li class="mainnav__item"><a href="{{ item.href }}">{{ item.name }}</a></li>
+  {% else %}
+    <li class="mainnav__item">no item</li>
+  {% endfor %}
+  </ul>
+</nav>
