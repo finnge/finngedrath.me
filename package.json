@@ -25,5 +25,15 @@
   "bugs": {
     "url": "https://github.com/finnge/finngedrath.me/issues"
   },
-  "homepage": "https://github.com/finnge/finngedrath.me#readme"
+  "homepage": "https://github.com/finnge/finngedrath.me#readme",
+  "dependencies": {
+    "@11ty/eleventy-img": "^2.0.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@gerhobbelt/markdown-it-footnote": "^3.0.3-12",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-attrs": "^4.1.3",
+    "uslug": "^1.0.4"
+  }
 }

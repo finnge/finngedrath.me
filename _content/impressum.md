@@ -1,6 +1,9 @@
 ---
 title: impressum
 layout: default
+eleventyNavigation:
+  key: impressum
+  order: 99
 ---
 
 ## angaben gemäß § 5 TMG

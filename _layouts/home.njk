@@ -4,7 +4,9 @@ layout: base.njk
 
 <header>
   <div class="profile">
-    <h1>{{ site.title }}</h1>
+    <h1>{{ title }}</h1>
+
+    {% Image "_content/profile.jpeg", "Finn Gedrath steht lächelnd vor einer bunten Wand" %}
     
     {# {% include image.html figure=0 file="profile" alt="Finn Gedrath steht lächelnd vor einer bunten Wand" 
     class="profile__picture" %}#}
@@ -33,7 +35,7 @@ layout: base.njk
         {{ content | safe }}
     </section>
     <section>
-        <h2 id="projects">projects</h2>
+        <h2 id="projekte">projekte</h2>
         <div class="coming-soon">
             <div class="coming-soon_text">
                 Coming soon...

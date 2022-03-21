@@ -7,9 +7,12 @@ hashtags:
   - uxui
   - webdevelopment
   - frontend
+
+eleventyNavigation:
+  key: home
 ---
 
-## about
+## über
 
 Ich bin [Medieninformatik-Student](https://medieninformatik.th-koeln.de/){:title="Medieninformatik an der TH Köln"} mit Vertiefungen in der Mensch-Computer Interaktion und Web-Development. Alle meine Open-Source Projekte sind unter meinem [GitHub-Profil]({{ accounts.github.uri }}) zu finden.
 
