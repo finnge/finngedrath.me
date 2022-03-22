@@ -1,0 +1,83 @@
+---
+layout: base.njk
+tags: projekte
+---
+
+<div style="grid-column: 1 / -1">
+<a href="../"> &larr; Übersicht </a>
+</div>
+
+<header>
+  
+  <h1>{{ title }}</h1>
+  
+  <p class="subtitle">
+  {{ subtitle }}
+  </p>
+
+  <ul class="hashtags">
+    {% for tag in hashtags %}
+    <li class="hashtags__tag">#{{ tag | lower | replace(" ", "-") }}</li>
+    {% endfor %}
+  </ul>
+
+  {% if(coworker | length > 0 or context | length > 0) %}
+  <hr>
+  {% endif %}
+
+  {% if(coworker | length > 0) %}
+
+  <h4>Mitwirkende(r)</h4>
+
+  <ul class="hashtags" data-style="big">
+    {% for id, occupation in coworker %}
+    <li class="hashtags__tag">
+      <span class="primary">
+        {{ people[id].name }}
+        {% if(people[id].link !== '') %}<a href="{{ people[id].link }}" rel="noopener noreferrer" target="_blank">&nearr;</a>{% endif %}
+      </span> {# TODO: better css tokens #}
+      <span class="secondary">
+        {{ occupation | lower }}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
+  {% if(context | length > 0) %}
+
+  <h4>Kontext</h4>
+
+  <ul class="hashtags" data-style="big">
+    {% for id, occupation in context %}
+    <li class="hashtags__tag">
+      <span class="primary">
+        {{ people[id].name }}&nbsp;{% if(people[id].link !== '') %}<a href="{{ people[id].link }}" rel="noopener noreferrer" target="_blank">&nearr;</a>{% endif %}
+      </span> {# TODO: better css tokens #}
+      <span class="secondary">
+        {{ occupation | lower }}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
+
+  {% if(coworker | length > 0 or context | length > 0) %}
+  <hr>
+  {% endif %}
+
+  <ul class="hashtags" data-style="big">
+    {% for link in links %}
+    <li class="hashtags__tag">
+      <a href="{{ link.href }}" rel="noopener noreferrer" target="_blank">{{ link.title }}&nbsp;&nearr;</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {# {% include 'nav.njk' %} #}
+</header>
+
+<main>
+  {{ content | safe }}
+</main>

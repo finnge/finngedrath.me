@@ -1,0 +1,15 @@
+---
+title: projekte
+layout: default
+
+eleventyNavigation:
+  key: projekte
+---
+
+<ul>
+{%- for projekt in collections.projekte | reverse -%}
+  <li{% if page.url == projekt.url %} aria-current="page"{% endif %}>
+    <a href="{{ projekt.url }}">{{ projekt.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>

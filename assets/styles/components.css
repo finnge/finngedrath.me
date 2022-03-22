@@ -27,10 +27,25 @@
    ========================================================================== */
 .hashtags {
   margin: var(--m) 0;
+  color: var(--c-fg-3);
 }
 
 .hashtags__tag {
   display: inline;
+}
+
+.hashtags[data-style="big"] .hashtags__tag {
+  display: block;
+  margin: var(--s) 0;
+}
+
+.hashtags[data-style="big"] .hashtags__tag .primary,
+.hashtags[data-style="big"] .hashtags__tag .secondary {
+  display: block;
+}
+.hashtags[data-style="big"] .hashtags__tag .secondary {
+  font-style: italic;
+  font-size: var(--s);
 }
 
 /* ==========================================================================
@@ -46,11 +61,18 @@
 }
 
 /* ==========================================================================
-   Hashtag
+   Grid
    ========================================================================== */
 .grid {
   display: grid;
   margin: var(--m) 0;
   gap: var(--m);
   grid-template-columns: repeat(auto-fill, minmax(calc(var(--min-line-length)), 1fr));
+}
+
+/* ==========================================================================
+   Coming Soon
+   ========================================================================== */
+.subtitle {
+  font-family: var(--ff-serif);
 }

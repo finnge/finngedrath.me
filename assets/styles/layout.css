@@ -37,8 +37,15 @@ footer {
 
 .mainnav {
   padding: var(--m) 0;
-  border-top: var(--border-3);
   margin: var(--xxl) 0;
+}
+
+.mainnav:not(:first-child) {
+  border-top: var(--border-3);
+}
+
+.mainnav:not(:last-child) {
+  border-bottom: var(--border-3);
 }
 
 .mainnav__item {

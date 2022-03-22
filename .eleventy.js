@@ -27,13 +27,12 @@ module.exports = (eleventyConfig) => {
   // @see https://dev.to/22mahmoud/how-to-optimize-and-lazyload-images-on-eleventy-11ty-206h
   // eleventyConfig.addPassthroughCopy("_content/**/*.(jp?(e)g|png|webp|tiff|avif|svg)");
 
-  eleventyConfig.addNunjucksAsyncShortcode("Image", async function (src, alt, aspectRatio = "", _sizes = "", cssClass = "") {
+  eleventyConfig.addNunjucksAsyncShortcode("Image", async function (src, alt, aspectRatio = "", position = "", _sizes = "", cssClass = "") {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
 
     let sizes = '';
-
     if (_sizes === "") {
       sizes = "(min-width: 1024px) 1024px, 100vw";
     }
@@ -48,10 +47,10 @@ module.exports = (eleventyConfig) => {
       outputDir: `./dist/media`,
       hashLength: 32,
       filenameFormat: function (id, src, width, format) {
-        const extension = path.extname(src);
-        const basename = path.basename(src, extension);
+        // const extension = path.extname(src);
+        // const basename = path.basename(src, extension);
 
-        return `${basename}-${width}w.${id}.${format}`;
+        return `${id}-${width}w.${format}`;
       }
     });
 
@@ -82,9 +81,11 @@ module.exports = (eleventyConfig) => {
       width="${lowestSrc.width}"
       height="${lowestSrc.height}"
       class="${cssClass}"
-      style="${(aspectRatio) ? '--aspect-ratio:' + aspectRatio : ''}">`;
+      style="object-position: ${(position) ? position : '50%, 50%'}${(aspectRatio) ? '; --aspect-ratio:' + aspectRatio : ''}">`;
 
-    return `<picture> ${sourceAvif} ${sourceWebp} ${img} </picture>`;
+    const picture = `<picture> ${sourceAvif} ${sourceWebp} ${img} </picture>`;
+
+    return `<figure>${picture}</figure>`
   });
 
 
@@ -106,6 +107,7 @@ module.exports = (eleventyConfig) => {
       includes: '../_includes',
       input: '_content',
       layouts: '../_layouts',
+      data: '../_data',
       output: 'dist',
     },
     pathPrefix: '',
