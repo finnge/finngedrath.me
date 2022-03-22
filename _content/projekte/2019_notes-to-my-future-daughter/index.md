@@ -24,6 +24,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae qui non vident, ni
 
 
 
-{% Image "photography-001.jpeg", "test" %}
+
+
+{% Grid %}
+{% Image "photography-001.jpeg", "test", "5 / 6" %}
+{% Image "photography-002.jpeg", "test", "5 / 6" %}
+{% Image "photography-003.jpeg", "test", "5 / 6" %}
+{% endGrid %}
 
 <iframe height="315" src="https://www.youtube-nocookie.com/embed/wC8WimGFLrU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="--aspect-ratio: 16 / 9; width: 100%;" allowfullscreen></iframe>
+
+

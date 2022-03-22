@@ -1,5 +1,4 @@
 const path = require("path");
-const fs = require('fs');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
@@ -28,7 +27,7 @@ module.exports = (eleventyConfig) => {
   // @see https://dev.to/22mahmoud/how-to-optimize-and-lazyload-images-on-eleventy-11ty-206h
   // eleventyConfig.addPassthroughCopy("_content/**/*.(jp?(e)g|png|webp|tiff|avif|svg)");
 
-  eleventyConfig.addNunjucksAsyncShortcode("Image", async function (src, alt, _sizes = "", cssClass = "") {
+  eleventyConfig.addNunjucksAsyncShortcode("Image", async function (src, alt, aspectRatio = "", _sizes = "", cssClass = "") {
     if (!alt) {
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
@@ -82,9 +81,16 @@ module.exports = (eleventyConfig) => {
       srcset="${srcset["jpeg"]}"
       width="${lowestSrc.width}"
       height="${lowestSrc.height}"
-      class="${cssClass}">`;
+      class="${cssClass}"
+      style="${(aspectRatio) ? '--aspect-ratio:' + aspectRatio : ''}">`;
 
     return `<picture> ${sourceAvif} ${sourceWebp} ${img} </picture>`;
+  });
+
+
+  // Grid
+  eleventyConfig.addPairedNunjucksAsyncShortcode("Grid", async function (content) {
+    return `<div class="grid"> ${content} </div>`;
   });
 
 

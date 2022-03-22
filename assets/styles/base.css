@@ -13,9 +13,10 @@ body {
 }
 
 img:not([src*=".svg"]) {
-  filter: var(--image-filter);
+  display: block;
   width: 100%;
-    height: auto;
+  height: auto;
+  filter: var(--image-filter);
 }
 
 p {

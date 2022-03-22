@@ -44,3 +44,13 @@
   justify-content: center;
   background-color: var(--c-bg-2);
 }
+
+/* ==========================================================================
+   Hashtag
+   ========================================================================== */
+.grid {
+  display: grid;
+  margin: var(--m) 0;
+  gap: var(--m);
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--min-line-length)), 1fr));
+}

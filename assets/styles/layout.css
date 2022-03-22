@@ -3,15 +3,18 @@
    ========================================================================== */
 
 body {
+  --grid-gap: var(--xxl);
+  --grid-left-width: calc(var(--base-xl) * 10rem);
+  --grid-right-width: calc(var(--grid-left-width) * 4);
+
   display: grid;
+  max-width: calc(var(--grid-left-width) + var(--grid-right-width) + var(--grid-gap));
   padding: var(--xxl) var(--xxl);
   background-color: var(--c-bg-1);
   color: var(--c-fg-1);
-  grid-gap: var(--xxl);
+  grid-gap: var(--grid-gap);
   grid-template-columns: var(--grid-left-width) 1fr;
   grid-template-rows: 1fr;
-
-  --grid-left-width: calc(var(--base-xl) * 10rem);
 }
 
 section:not(:last-child) {
