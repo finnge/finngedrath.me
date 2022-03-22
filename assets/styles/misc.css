@@ -1,6 +1,7 @@
 [style*="--aspect-ratio"] {
   aspect-ratio: var(--aspect-ratio);
   object-fit: cover;
+  height: auto;
 }
 
 @supports not (aspect-ratio: 1/1) {

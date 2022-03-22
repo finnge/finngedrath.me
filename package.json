@@ -9,7 +9,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -r dist",
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "test": "npm run lint",
