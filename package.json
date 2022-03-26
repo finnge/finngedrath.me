@@ -12,8 +12,12 @@
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "test": "npm run lint",
-    "lint": "stylelint assets/**/*.css",
-    "lint:fix": "stylelint --fix assets/**/*.css"
+    "lint:css": "npx stylelint assets/**/*.css",
+    "lint:css:fix": "npx stylelint --fix assets/**/*.css",
+    "lint:js": "npx eslint",
+    "lint:js:fix": "npx eslint --fix",
+    "lint:": "npm run lint:css & npm run lint:js",
+    "lint:fix": "npm run lint:css:fix & npm run lint:js:fix"
   },
   "repository": {
     "type": "git",

@@ -43,9 +43,10 @@
 .hashtags[data-style="big"] .hashtags__tag .secondary {
   display: block;
 }
+
 .hashtags[data-style="big"] .hashtags__tag .secondary {
-  font-style: italic;
   font-size: var(--s);
+  font-style: italic;
 }
 
 /* ==========================================================================

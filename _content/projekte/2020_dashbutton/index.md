@@ -2,8 +2,8 @@
 layout: projekt
 title: Dashbutton in an Industrial Context
 subtitle: automation of ordering process with the use of internet-of-things technology
-start_date: 2021-10-01
-date: 2022-03-18
+start_date: 2020-05-20
+date: 2020-08-21
 coworker:
   lpelzer:
 context:

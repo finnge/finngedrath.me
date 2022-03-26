@@ -15,6 +15,10 @@ tags: projekte
   {{ subtitle }}
   </p>
 
+  <p>
+    {{ period }}
+  </p>
+
   <ul class="hashtags">
     {% for tag in hashtags %}
     <li class="hashtags__tag">#{{ tag | lower | replace(" ", "-") }}</li>
