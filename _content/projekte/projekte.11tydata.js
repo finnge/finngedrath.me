@@ -4,6 +4,10 @@ module.exports = {
       const start = new Date(data.start_date ?? data.date);
       const end = new Date(data.date ?? 'today');
 
+      if (start - end > 0) {
+        throw new TypeError('End Date cannot be before Start Date');
+      }
+
       // Day is irrelevant
       start.setDate(1);
       end.setDate(1);

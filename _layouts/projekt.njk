@@ -74,7 +74,13 @@ tags: projekte
   <ul class="hashtags" data-style="big">
     {% for link in links %}
     <li class="hashtags__tag">
-      <a href="{{ link.href }}" rel="noopener noreferrer" target="_blank">{{ link.title }}&nbsp;&nearr;</a>
+      <span class="primary">
+        <a href="{{ link.href }}" rel="noopener noreferrer" target="_blank">{{ link.title }}&nbsp;&nearr;</a>
+      </span> {# TODO: better css tokens #}
+      <span class="secondary">
+        {{ link.subtitle }}
+      </span>
+      
     </li>
     {% endfor %}
   </ul>

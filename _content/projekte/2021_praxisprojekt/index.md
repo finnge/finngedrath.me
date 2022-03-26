@@ -11,6 +11,7 @@ links:
   - 
     href: https://nbn-resolving.org/urn:nbn:de:hbz:832-epub4-18417
     title: Term Paper as Open Access
+    subtitle: "[urn:nbn:de:hbz:832-epub4-18417]"
 
 teaser:
   src: teaser.jpeg

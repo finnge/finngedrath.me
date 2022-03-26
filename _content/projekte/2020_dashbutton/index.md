@@ -12,9 +12,13 @@ links:
   - 
     href: https://github.com/ﬁnnge/iot-service-button
     title: GitHub Repository
+    subtitle: finnge/iot-service-button
   -
     href: https://github.com/finnge/iot-service-button/raw/master/paper/paper.pdf
     title: Term paper
+  -
+    href: https://finnge.github.io/iot-service-button/
+    title: Projekt Seite
 
 teaser:
   src: teaser.jpeg

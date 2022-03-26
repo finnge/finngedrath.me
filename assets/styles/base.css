@@ -10,6 +10,7 @@ body {
   font-weight: var(--fw-normal);
   line-height: var(--lh-normal);
   text-rendering: optimizeLegibility;
+  hyphens: auto;
 }
 
 img:not([src*=".svg"]) {
